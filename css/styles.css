@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+    --violet:#4a065f;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    border: none;
+    transition: all .5s linear;
+}
+
+*::selection{
+    background:darkorchid;
+    color:#ffffff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: rgb(6, 41, 41);
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+
+.heading span{
+    color:var(--violet);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background:rgb(15, 37, 37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    margin-top: 1rem;
+    height: 22rem;
+    width: 20rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--violet);
+    border-radius: 2rem;
+}
+
+header .user .name{
+    font-size: 4rem;
+    color:seashell;
+}
+
+header h1{
+    color:white;
+    font-style: italic;
+}
+
+header .navbar{
+    width:100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background:rgb(82, 64, 87);
+    color:white;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background:var(--violet);
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 5rem;
+    color: white;
+}
+
+.home h3{
+    font-size: 2.5rem;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: whitesmoke;
+    clear: both;
+}
+
+.home p{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+/* flipping image section */
+
+.portfolio img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flip-box {
+    height: 26rem;
+    width: 30rem;
+    padding: 2rem;
+    background-color: rgb(6, 41, 41);
+    margin: auto;
+}
+
+.portfolio .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.portfolio .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.portfolio .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.portfolio .flip-box-back {
+    background-color: transparent;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+/* flipping ends */
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.5rem;
+    background:rgb(82, 64, 87);
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+    color: rgb(115, 67, 129);
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem;
+    left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    background:var(--violet);
+}
+
+.hobbies .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.hobbies .box-container .box{
+    height: 20rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hobbies .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.hobbies .box-container .box:hover img{
+    transform: scale(1.5);
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:#eee;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color:var(--violet);
+}
+
+/* media queries */
+
+@media (max-width:991px){
+
+header{
+   left: -150%;
+}
+
+body{
+   padding:0;
+}
+
+.flex{
+    flex-direction: column;
+}
+
+}
+
